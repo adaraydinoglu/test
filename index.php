@@ -1,27 +1,24 @@
 <?php
 include("baglanti.php");
 
-if(isset($_POST["adsoyad"]))
-{
+if (isset($_POST["adsoyad"])) {
     $adsoyad = $_POST["adsoyad"];
     $telefon = $_POST["telefon"];
-    $email   = $_POST["email"];
-    $konu    = $_POST["konu"];
-    $mesaj   = $_POST["mesaj"];
+    $email = $_POST["email"];
+    $konu = $_POST["konu"];
+    $mesaj = $_POST["mesaj"];
 
-    if(
+    if (
         !empty($adsoyad) &&
         !empty($telefon) &&
         !empty($email) &&
         !empty($konu) &&
         !empty($mesaj)
-    )
-    {
+    ) {
         $ekle = "INSERT INTO iletisim(adsoyad,telefon,email,konu,mesaj)
                  VALUES('$adsoyad','$telefon','$email','$konu','$mesaj')";
 
-        if(mysqli_query($baglan,$ekle))
-        {
+        if (mysqli_query($baglan, $ekle)) {
             echo "<script>alert('Mesajınız başarıyla gönderildi.');</script>";
         }
     }
@@ -33,261 +30,234 @@ if(isset($_POST["adsoyad"]))
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adli Bilişim Mühendisliği</title>
+    <title>Adli Bilişim Mühendisliği</title>
 
-<link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="stil.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<section id="menu">
+    <section id="menu">
 
-    <div id="logo">
-        ABM
-    </div>
-
-    <nav>
+        <div id="logo">
+            ABM
+        </div>
 
         <nav>
 
-    <a href="#banner">
-        <i class="fa-regular fa-house ikon"></i>
-        Anasayfa
-    </a>
+            <a href="#banner">
+                <i class="fa-solid fa-house ikon"></i>
+                Anasayfa
+            </a>
 
-    <a href="#dersler">
-        <i class="fa-solid fa-user-graduate ikon"></i>
-        Dersler
-    </a>
+            <a href="#dersler">
+                <i class="fa-solid fa-graduation-cap ikon"></i>
+                Dersler
+            </a>
 
-    <a href="#personel">
-        <i class="fa-solid fa-user-plus ikon"></i>
-        Akademik Personel
-    </a>
+            <a href="#personel">
+                <i class="fa-solid fa-user-plus ikon"></i>
+                Akademik Personel
+            </a>
 
-    <a href="#hakkimizda">
-        <i class="fa-solid fa-address-card ikon"></i>
-        Hakkımızda
-    </a>
+            <a href="#hakkimizda">
+                <i class="fa-solid fa-address-card ikon"></i>
+                Hakkımızda
+            </a>
 
-    <a href="#iletisim">
-        <i class="fa-solid fa-info ikon"></i>
-        İletişim
-    </a>
+            <a href="#iletisim">
+                <i class="fa-solid fa-circle-info ikon"></i>
+                İletişim
+            </a>
 
-</nav>
+        </nav>
 
-</section>
+    </section>
 
-<section id="banner">
+    <section id="banner">
 
-    <div id="black"></div>
+        <div id="black"></div>
 
-    <div id="icerik">
+        <div id="icerik">
 
-        <h1>Adli Bilişim Mühendisliği</h1>
+            <h1>Adli Bilişim Mühendisliği</h1>
 
-        <hr>
+            <hr>
 
-        <p>
-            Adli bilişim mühendisliği; dijital delillerin elde edilmesi,
-            incelenmesi ve raporlanması süreçlerinde görev alan önemli
-            bir mühendislik alanıdır.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="hakkimizda">
-
-    <h3>Hakkımızda</h3>
-
-    <div id="container">
-
-        <div id="sol">
-
-            <h5 id="h5sol">
-                Adli Bilişim Mühendisliği Bölümü
-            </h5>
-
-        </div>
-
-        <div id="sag">
-
-            <span>A</span>
-
-            <p id="psag">
-                dli bilişim mühendisliği günümüzde dijital suçların
-                araştırılması, delillerin korunması ve analiz edilmesi
-                süreçlerinde önemli görevler üstlenmektedir.
-                Öğrencilerimiz web güvenliği, ağ güvenliği ve
-                dijital delil inceleme alanlarında eğitim almaktadır.
-            </p>
-
-        </div>
-
-        <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200"
-            alt="Adli Bilişim"
-            class="img-fluid">
-
-        <p id="pson">
-            Bölümümüz öğrencilerine web güvenliği,
-            ağ güvenliği, sayısal delil analizi ve
-            sızma testleri gibi alanlarda uygulamalı
-            eğitimler sunmaktadır.
-        </p>
-
-    </div>
-
-</section>
-<section id="dersler">
-
-    <h3>Dersler</h3>
-
-    <div class="kartlar">
-
-        <div class="kart">
-            <h4>Web Güvenliği</h4>
             <p>
-                XSS, SQL Injection, CSRF ve güvenli kodlama teknikleri.
+                Günümüz dünyasında internetin yaygınlaşması, kişisel bilgisayarlarla akıllı cihazların kullanım oranının
+                artması ve kişisel bilgilerin sayısal ortamlarda depolanmasına paralel olarak, bu bilgilere yetkisiz
+                erişmek isteyenlerin sayısı da artmıştır. Yetkisiz erişim ve internet korsanlığı (hacker) siber suç
+                kavramını ortaya çıkarmıştır. Devletleri dahi etkileyen bu tehditlerle mücadele edebilmek için Adli
+                Bilişim Mühendisliği (Digital Forensics Engineering) disiplini ortaya çıkmıştır.
             </p>
+
         </div>
 
-        <div class="kart">
-            <h4>Ağ Güvenliği</h4>
-            <p>
-                Ağ izleme, IDS/IPS sistemleri ve saldırı tespiti.
+    </section>
+
+    <section id="hakkimizda">
+
+        <h3 class="bolum-baslik">Hakkımızda</h3>
+
+        <div id="container">
+
+            <div class="hakkimizda-ust-grup">
+                <div id="sol">
+                    <h5 id="h5sol">
+                        Adli Bilişim Mühendisliği Temel Mühendislik Eğitimiyle Beraber Alana Yönelik Derslerle Kişilerin
+                        Bu Alanda Uzmanlaşmasını Amaçlamaktadır.
+                    </h5>
+                </div>
+
+                <div id="sag">
+                    <span>A</span>
+                    <p id="psag">
+                        dli Bilişim Mühendisliği bölümünün Amacı; Değerli Bilgisayar Mühendisliği ile ortak derslerle,
+                        Mühendislik Yaklaşımıyla, araştırma, geliştirme, bilgi güvenliği, siber güvenlik ve bilişim
+                        hukuku ile ilgili tüm süreçlerdeki Adli Vakaları Çözebilecek ve yönetebilecek Yetkinlikte
+                        Mühendisler Yetiştirmektir.
+                    </p>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200" alt="Adli Bilişim"
+                class="img-fluid">
+
+            <p id="pson">
+                Adli Bilişim Mühendisliği, Suçlarla İlgili Dijital Kanıtların Toplanması, Analizi Ve Yorumlanması Gibi
+                Konuları Ele Alan Bir Bölümdür. Adli Bilişim Mühendisliği; Bilgisayar Korsanlığı, Veri Kurtarma, Dijital
+                Delillerin Toplanması Ve Analizi, Siber Suçlar, Veri Güvenliği, Ağ Güvenliği Gibi Konulara Odaklanır.
+                Adli Bilişim Mühendisliği Bölümünde Öğrenciler; Dijital Delillerin Toplanması Ve Analizi, Veri Kurtarma,
+                Siber Saldırıların Önlenmesi Ve Tespiti, Bilgisayar Korsanlığı İle Mücadele, Ağ Güvenliği, Veri
+                Şifreleme Ve Diğer Teknik Becerileri Öğrenirler. Bu Bilgi Ve Beceriler, Mahkemelerde Ve Savcılıklarda
+                Kullanılan Dijital Kanıtların Doğrulanması Ve Suçlu Kişilerin Tespit Edilmesi İçin Önemlidir.
             </p>
+
         </div>
 
-        <div class="kart">
-            <h4>Sayısal Delil Analizi</h4>
-            <p>
-                Disk imajı alma ve dijital delil inceleme süreçleri.
-            </p>
+    </section>
+
+    <section id="dersler">
+
+        <h3 class="bolum-baslik">Dersler</h3>
+
+        <div class="kartlar">
+
+            <div class="kart">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
+                <h4>İnternet Ve E-Ticaret Dersi</h4>
+                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+            </div>
+
+            <div class="kart">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
+                <h4>Bilgisayar Ağları</h4>
+                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+            </div>
+
+            <div class="kart">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
+                <h4>İşletim Sistemleri</h4>
+                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+            </div>
+
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<section id="personel">
+    <section id="personel">
 
-    <h3>Akademik Personel</h3>
+        <h3 class="bolum-baslik">Akademik Personel</h3>
 
-    <div class="kartlar">
+        <div class="kartlar">
 
-        <div class="kart">
-            <img src="https://picsum.photos/200/200?1">
-            <h4>Dr. Ahmet Yılmaz</h4>
-            <p>Bölüm Başkanı</p>
+            <div class="kart">
+                <img
+                    src="https://apiabs.firat.edu.tr/images/userProfilePicture/9ef72b27-af89-446d-929f-99723806eee9.jpeg">
+                <h4>Prof. Dr. Şengül Doğan</h4>
+                <p>Bölüm Başkanı</p>
+            </div>
+
+            <div class="kart">
+                <img
+                    src="https://apiabs.firat.edu.tr/images/userProfilePicture/a1d1a43d-d238-4b31-953f-62d5c5a44151.jpg">
+                <h4>İlhan Fırat Kılınçer</h4>
+                <p>Dr. Öğretim Üyesi</p>
+            </div>
+
+            <div class="kart">
+                <img
+                    src="https://apiabs.firat.edu.tr/images/userProfilePicture/7027d538-90e1-4c82-9167-f700123ad881.JPG">
+                <h4>Erhan Akbal</h4>
+                <p>Doç. Dr.</p>
+            </div>
+
         </div>
 
-        <div class="kart">
-            <img src="https://picsum.photos/200/200?2">
-            <h4>Doç. Ayşe Kaya</h4>
-            <p>Adli Bilişim Uzmanı</p>
-        </div>
+    </section>
 
-        <div class="kart">
-            <img src="https://picsum.photos/200/200?3">
-            <h4>Dr. Mehmet Demir</h4>
-            <p>Siber Güvenlik Uzmanı</p>
-        </div>
+    <section id="iletisim">
 
-    </div>
+        <h3 class="bolum-baslik-iletisim">İletişim</h3>
 
-</section>
-<section id="iletisim">
+        <div class="iletisim-kapsayici">
 
-    <h3>İletişim</h3>
+            <div class="iletisim-cam-kutu">
 
-    <div class="iletisim-form">
+                <div class="iletisim-sol">
+                    <form action="index.php" method="POST">
+                        <input type="text" name="adsoyad" placeholder="Ad Soyad" required class="form-kontrol">
 
-        <form action="index.php" method="POST">
+                        <input type="text" name="telefon" placeholder="Telefon Numarası" required class="form-kontrol">
 
-            <div class="sol-form">
+                        <input type="email" name="email" placeholder="E-Mail Adresi" required class="form-kontrol">
 
-                <input
-                    type="text"
-                    name="adsoyad"
-                    placeholder="Ad Soyad"
-                    required
-                    class="form-kontrol">
+                        <input type="text" name="konu" placeholder="Konu Başlığı" required class="form-kontrol">
 
-                <input
-                    type="text"
-                    name="telefon"
-                    placeholder="Telefon"
-                    required
-                    class="form-kontrol">
+                        <textarea name="mesaj" rows="5" placeholder="Mesajınızı yazınız" required
+                            class="form-kontrol"></textarea>
+
+                        <input type="submit" value="Gönder" id="gonder">
+                    </form>
+                </div>
+
+                <div class="iletisim-sag">
+                    <h3>Adres:</h3>
+                    <p>Alparslan Mah.</p>
+                    <p>232323 Sok. No: 45/10</p>
+                    <p>Elazığ</p>
+                </div>
 
             </div>
 
-            <div class="sag-form">
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="E-Mail"
-                    required
-                    class="form-kontrol">
-
-                <input
-                    type="text"
-                    name="konu"
-                    placeholder="Konu"
-                    required
-                    class="form-kontrol">
-
-            </div>
-
-            <textarea
-                name="mesaj"
-                rows="8"
-                placeholder="Mesajınızı Yazınız"
-                required
-                class="form-kontrol"></textarea>
-
-            <input
-                type="submit"
-                value="Gönder"
-                id="gonder">
-
-        </form>
-
-    </div>
-
-    <footer>
-
-        <p>© 2026 Adli Bilişim Mühendisliği</p>
-
-        <div class="sosyal">
-
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
-
         </div>
 
-    </footer>
+        <footer>
 
-    <a href="#menu" id="up">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
+            <p>2024 tüm hakları gizlidir</p>
 
-</section>
+            <div class="sosyal">
+                <span class="parantez-ikon">[ <i class="fa-brands fa-linkedin-in"></i> ]</span>
+                <span class="parantez-ikon">[ <i class="fa-solid fa-graduation-cap"></i> ]</span>
+                <span class="parantez-ikon">[ <i class="fa-brands fa-google"></i> ]</span>
+            </div>
+
+        </footer>
+
+        <a href="#menu" id="up">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+
+    </section>
 
 </body>
+
 </html>

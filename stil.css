@@ -1,255 +1,420 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f6f8;
 }
 
-#menu{
-    background:#222;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
+/* 1. Menu Section */
+#menu {
+    background: white;
+    /* Warm gray/beige background matching Image 4 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-#logo{
-    font-size:28px;
-    font-weight:bold;
+#logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0b1c3f;
+    /* Dark indigo/blue color matching Image 4 */
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+nav a {
+    color: #0b1c3f;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s;
 }
 
-.ikon{
-    margin-right:5px;
+nav a:hover {
+    opacity: 0.8;
 }
 
-#banner{
-    height:450px;
-    background:url("https://picsum.photos/1920/1080") center center;
-    background-size:cover;
-    position:relative;
+.ikon {
+    margin-right: 8px;
+    font-size: 16px;
 }
 
-#black{
-    width:100%;
-    height:100%;
-    background:black;
-    opacity:0.5;
-    position:absolute;
+/* 2. Banner Section */
+#banner {
+    height: 500px;
+    background: url("https://images.unsplash.com/photo-1544256718-3bcf237f3974?w=1920") center center;
+    background-size: cover;
+    position: relative;
 }
 
-#icerik{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    color:white;
-    text-align:center;
-    z-index:1;
+#black {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+    position: absolute;
 }
 
-#hakkimizda{
-    padding:50px;
-    background:white;
+#icerik {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* Aligned to the left matching Image 4 */
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    z-index: 1;
+    max-width: 650px;
 }
 
-#hakkimizda h3{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:40px;
+#icerik h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-#container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
+#icerik hr {
+    width: 150px;
+    border: 1px solid white;
+    margin-bottom: 20px;
 }
 
-#sol{
-    width:45%;
-    float:left;
+#icerik p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.9;
 }
 
-#h5sol{
-    font-size:24px;
-    color:#f39c12;
-    border-right:3px solid #f39c12;
-    padding-right:20px;
+/* 3. Hakkımızda Section */
+#hakkimizda {
+    padding: 60px 80px;
+    background: #b2b8c2;
+    /* Cool silver-gray background matching Image 2 */
 }
 
-#sag{
-    width:50%;
-    float:right;
+.bolum-baslik {
+    text-align: center;
+    font-size: 32px;
+    color: #0b1c3f;
+    /* Dark blue title */
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
-#sag span{
-    font-size:60px;
-    font-weight:bold;
-    float:left;
-    line-height:50px;
-    margin-right:10px;
+#hakkimizda #container {
+    width: 90%;
+    margin: auto;
 }
 
-#psag{
-    font-size:16px;
-    line-height:1.7;
-    text-align:justify;
+.hakkimizda-ust-grup {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
 }
 
-.img-fluid{
-    width:100%;
-    margin-top:40px;
-    display:block;
-    clear:both;
+#hakkimizda #sol {
+    width: 45%;
+    border-right: 2px solid #5b6370;
+    /* Vertical line separator */
+    padding-right: 40px;
 }
 
-#pson{
-    margin-top:20px;
-    font-size:16px;
-    line-height:1.8;
-    text-align:justify;
+#h5sol {
+    font-size: 18px;
+    color: #8c4f2b;
+    /* Brownish/orange color matching Image 2 */
+    line-height: 1.6;
+    text-align: left;
+    font-weight: bold;
 }
 
-#container{
-    width:90%;
-    margin:auto;
+#hakkimizda #sag {
+    width: 50%;
+    padding-left: 10px;
 }
 
-#sol{
-    width:50%;
-    float:left;
+#sag span {
+    font-size: 65px;
+    font-weight: bold;
+    float: left;
+    line-height: 55px;
+    margin-right: 12px;
+    color: #0b1c3f;
+    /* Dark blue letter A */
 }
 
-#sag{
-    width:50%;
-    float:right;
+#psag {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #1c2430;
 }
 
-#sag span{
-    font-size:50px;
-    font-weight:bold;
+#hakkimizda .img-fluid {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    clear: both;
 }
 
-.img-fluid{
-    width:100%;
-    margin-top:30px;
-    display:block;
-    clear:both;
+#pson {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #000000;
+    font-weight: bold;
+    /* Bold description at bottom matching Image 2 */
 }
 
-#pson{
-    margin-top:20px;
+/* 4. Dersler Section */
+#dersler {
+    padding: 60px 80px;
+    background: #c5c9ce;
+    /* Slightly lighter cool gray background matching Image 3 */
 }
 
-#iletisim{
-    padding:50px;
-    background:#f2f2f2;
+#dersler .kartlar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.iletisim-form{
-    width:80%;
-    margin:auto;
+#dersler .kart {
+    width: 350px;
+    background: #b8bdc5;
+    /* Grayish card background matching Image 3 */
+    border: 1px solid #a6acb5;
+    padding: 0;
+    border-radius: 0px;
+    /* Square corners */
+    text-align: center;
+    box-shadow: none;
+    overflow: hidden;
 }
 
-.sol-form{
-    width:48%;
-    float:left;
+#dersler .kart img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0px;
+    margin-bottom: 15px;
 }
 
-.sag-form{
-    width:48%;
-    float:right;
+#dersler .kart h4 {
+    margin-bottom: 12px;
+    color: #0b1c3f;
+    /* Dark blue title */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 15px;
 }
 
-.form-kontrol{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:4px;
-    margin-bottom:15px;
+#dersler .kart-alt-baslik {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #3f4752;
+    padding: 0 15px 25px;
 }
 
-textarea{
-    resize:none;
+/* 5. Akademik Personel Section */
+#personel {
+    padding: 60px 80px;
+    background: #d2d6dc;
 }
 
-#gonder{
-    padding:12px 25px;
-    background:#04AA6D;
-    color:white;
-    border:none;
-    cursor:pointer;
+#personel .kartlar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-footer{
-    margin-top:30px;
-    text-align:center;
+#personel .kart {
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
-.sosyal i{
-    margin:10px;
-    font-size:20px;
+#personel .kart img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-#up{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#04AA6D;
-    color:white;
-    padding:10px;
-}
-#dersler,
-#personel{
-    padding:60px 80px;
-    background:#f5f5f5;
+#personel .kart h4 {
+    margin-bottom: 10px;
+    color: #0b1c3f;
 }
 
-#dersler h3,
-#personel h3{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:40px;
+#personel .kart p {
+    line-height: 1.6;
+    color: #666;
 }
 
-.kartlar{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+/* 6. İletişim Section & Glassmorphic Form */
+#iletisim {
+    padding: 60px 80px 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920") center center;
+    background-size: cover;
+    position: relative;
 }
 
-.kart{
-    width:300px;
-    background:white;
-    padding:25px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-align:center;
+.bolum-baslik-iletisim {
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
-.kart img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
+.iletisim-kapsayici {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
-.kart h4{
-    margin-bottom:10px;
-    color:#f39c12;
+.iletisim-cam-kutu {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    /* Frosted glass container */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.kart p{
-    line-height:1.6;
+.iletisim-sol {
+    width: 60%;
+}
+
+.iletisim-sag {
+    width: 35%;
+    color: white;
+    padding-left: 20px;
+}
+
+.iletisim-sag h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.iletisim-sag p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.form-kontrol {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.35);
+    /* Translucent input background matching Image 1 */
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-kontrol::placeholder {
+    color: #4a5568;
+    /* Darker placeholder matching Image 1 */
+}
+
+textarea.form-kontrol {
+    resize: none;
+}
+
+#gonder {
+    padding: 10px 25px;
+    background: #1c355e;
+    /* Blue button border/fill matching Image 1 */
+    color: white;
+    border: 2px solid #284b70;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+#gonder:hover {
+    background: #2c4c80;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.sosyal {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.parantez-ikon {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.parantez-ikon i {
+    margin: 0 5px;
+}
+
+/* Back to top button */
+#up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #0b1c3f;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+#up:hover {
+    background: #1c355e;
 }
