@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#menu{
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+#logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.ikon{
+    margin-right:5px;
+}
+
+#banner{
+    height:450px;
+    background:url("https://picsum.photos/1920/1080") center center;
+    background-size:cover;
+    position:relative;
+}
+
+#black{
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0.5;
+    position:absolute;
+}
+
+#icerik{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    z-index:1;
+}
+
+#hakkimizda{
+    padding:50px;
+    background:white;
+}
+
+#hakkimizda h3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+#container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+#sol{
+    width:45%;
+    float:left;
+}
+
+#h5sol{
+    font-size:24px;
+    color:#f39c12;
+    border-right:3px solid #f39c12;
+    padding-right:20px;
+}
+
+#sag{
+    width:50%;
+    float:right;
+}
+
+#sag span{
+    font-size:60px;
+    font-weight:bold;
+    float:left;
+    line-height:50px;
+    margin-right:10px;
+}
+
+#psag{
+    font-size:16px;
+    line-height:1.7;
+    text-align:justify;
+}
+
+.img-fluid{
+    width:100%;
+    margin-top:40px;
+    display:block;
+    clear:both;
+}
+
+#pson{
+    margin-top:20px;
+    font-size:16px;
+    line-height:1.8;
+    text-align:justify;
+}
+
+#container{
+    width:90%;
+    margin:auto;
+}
+
+#sol{
+    width:50%;
+    float:left;
+}
+
+#sag{
+    width:50%;
+    float:right;
+}
+
+#sag span{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.img-fluid{
+    width:100%;
+    margin-top:30px;
+    display:block;
+    clear:both;
+}
+
+#pson{
+    margin-top:20px;
+}
+
+#iletisim{
+    padding:50px;
+    background:#f2f2f2;
+}
+
+.iletisim-form{
+    width:80%;
+    margin:auto;
+}
+
+.sol-form{
+    width:48%;
+    float:left;
+}
+
+.sag-form{
+    width:48%;
+    float:right;
+}
+
+.form-kontrol{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    margin-bottom:15px;
+}
+
+textarea{
+    resize:none;
+}
+
+#gonder{
+    padding:12px 25px;
+    background:#04AA6D;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    margin-top:30px;
+    text-align:center;
+}
+
+.sosyal i{
+    margin:10px;
+    font-size:20px;
+}
+
+#up{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#04AA6D;
+    color:white;
+    padding:10px;
+}
+#dersler,
+#personel{
+    padding:60px 80px;
+    background:#f5f5f5;
+}
+
+#dersler h3,
+#personel h3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.kartlar{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.kart{
+    width:300px;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.kart img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.kart h4{
+    margin-bottom:10px;
+    color:#f39c12;
+}
+
+.kart p{
+    line-height:1.6;
+}
