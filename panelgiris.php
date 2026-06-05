@@ -1,19 +1,21 @@
 <?php
 session_start();
+include "baglanti.php";
 
-if(isset($_POST["kullaniciadi"]))
-{
+if (isset($_POST["kullaniciadi"])) {
     $kullaniciadi = $_POST["kullaniciadi"];
     $sifre = $_POST["sifre"];
 
-    if($kullaniciadi=="admin" && $sifre=="abc123")
-    {
-        $_SESSION["user"] = $kullaniciadi;
+    $sorgu = "SELECT * FROM admin
+          WHERE kullaniciadi='$kullaniciadi'
+          AND sifre='$sifre'";
 
+    $sonuc = mysqli_query($baglan, $sorgu);
+
+    if (mysqli_num_rows($sonuc) > 0) {
+        $_SESSION["user"] = $kullaniciadi;
         header("Location: panel.php");
-    }
-    else
-    {
+    } else {
         echo "<script>alert('Kullanıcı adı veya şifre hatalı');</script>";
     }
 }

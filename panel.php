@@ -2,8 +2,7 @@
 
 session_start();
 
-if($_SESSION["user"]=="")
-{
+if ($_SESSION["user"] == "") {
     echo "
     <script>
     window.location.href='cikis.php';
@@ -11,8 +10,7 @@ if($_SESSION["user"]=="")
     ";
 }
 
-include("baglanti.php");
-
+include "baglanti.php";
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +55,19 @@ include("baglanti.php");
 <body>
 
 <h2>Gelen Mesajlar</h2>
+    <form method="GET">
+
+    <input type="text"
+           name="ara"
+           placeholder="Mesaj Ara">
+
+    <button type="submit">
+        Ara
+    </button>
+
+</form>
+
+<br>
 
 <table id="subat">
 
@@ -69,13 +80,23 @@ include("baglanti.php");
 </tr>
 
 <?php
+if(isset($_GET["ara"]))
+{
+    $ara = $_GET["ara"];
 
-$sec = "SELECT * FROM iletisim";
+    $sec = "SELECT * FROM iletisim
+            WHERE adsoyad LIKE '%$ara%'
+            OR konu LIKE '%$ara%'
+            OR mesaj LIKE '%$ara%'";
+}
+else
+{
+    $sec = "SELECT * FROM iletisim";
+}
+
 $sonuc = mysqli_query($baglan,$sec);
 
-while($cek = mysqli_fetch_assoc($sonuc))
-{
-?>
+while ($cek = mysqli_fetch_assoc($sonuc)) { ?>
 
 <tr>
     <td><?php echo $cek["adsoyad"]; ?></td>
@@ -85,8 +106,7 @@ while($cek = mysqli_fetch_assoc($sonuc))
     <td><?php echo $cek["mesaj"]; ?></td>
 </tr>
 
-<?php
-}
+<?php }
 ?>
 
 </table>

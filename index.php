@@ -42,7 +42,12 @@ if (isset($_POST["adsoyad"])) {
 </head>
 
 <body>
-
+<?php
+if(isset($_GET["isim"]))
+{
+    echo $_GET["isim"];
+}
+?>
     <section id="menu">
 
         <div id="logo">
@@ -68,7 +73,7 @@ if (isset($_POST["adsoyad"])) {
 
             <a href="#hakkimizda">
                 <i class="fa-solid fa-address-card ikon"></i>
-                Hakkımızda
+                Hakkımda
             </a>
 
             <a href="#iletisim">
@@ -162,19 +167,19 @@ odaklanıyorum.
             <div class="kart">
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
                 <h4>İnternet Ve E-Ticaret Dersi</h4>
-                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+                <p class="kart-alt-baslik">Web teknolojileri ve e-ticaret sistemlerini inceler.</p>
             </div>
 
             <div class="kart">
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
-                <h4>Bilgisayar Ağları</h4>
-                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+                <h4>Bilgi Güvenliği ve Kriptoloji</h4>
+                <p class="kart-alt-baslik">Şifreleme yöntemleri ve bilgi güvenliği prensiplerini inceler.</p>
             </div>
 
             <div class="kart">
                 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Ders Görseli">
-                <h4>İşletim Sistemleri</h4>
-                <p class="kart-alt-baslik">İnternet Üzerinden Saldırı Ve Savunmaları İnceler.</p>
+                <h4>Ağ ve Sistem güvenliği</h4>
+                <p class="kart-alt-baslik">Ağ altyapılarının güvenliği ve sistemlerin korunmasını inceler.</p>
             </div>
 
         </div>
@@ -191,22 +196,22 @@ odaklanıyorum.
             <div class="kart">
                 <img
                     src="https://apiabs.firat.edu.tr/images/userProfilePicture/9ef72b27-af89-446d-929f-99723806eee9.jpeg">
-                <h4>Prof. Dr. Şengül Doğan</h4>
-                <p>Bölüm Başkanı</p>
+                <h4>Şengül Doğan</h4>
+                <p>Prof. Dr. | Bölüm Başkanı</p>
             </div>
 
             <div class="kart">
                 <img
                     src="https://apiabs.firat.edu.tr/images/userProfilePicture/a1d1a43d-d238-4b31-953f-62d5c5a44151.jpg">
                 <h4>İlhan Fırat Kılınçer</h4>
-                <p>Dr. Öğretim Üyesi</p>
+                <p>Bölüm Başkan Yardımcısı | Dr. Öğr. Üyesi</p>
             </div>
 
             <div class="kart">
                 <img
                     src="https://apiabs.firat.edu.tr/images/userProfilePicture/7027d538-90e1-4c82-9167-f700123ad881.JPG">
                 <h4>Erhan Akbal</h4>
-                <p>Doç. Dr.</p>
+                <p>Bölüm Başkan Yardımcısı | Doç. Dr.</p>
             </div>
 
         </div>
@@ -240,9 +245,8 @@ odaklanıyorum.
 
                 <div class="iletisim-sag">
                     <h3>Adres:</h3>
-                    <p>Alparslan Mah.</p>
-                    <p>232323 Sok. No: 45/10</p>
-                    <p>Elazığ</p>
+                   <p>Elazığ</p>
+                   <p>Türkiye</p>
                 </div>
 
             </div>
