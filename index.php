@@ -33,7 +33,7 @@ if (isset($_POST["adsoyad"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Adli Bilişim Mühendisliği</title>
+    <title>Adar AYDINOĞLU</title>
 
     <link rel="stylesheet" href="stil.css">
 
@@ -91,11 +91,7 @@ if (isset($_POST["adsoyad"])) {
             <hr>
 
             <p>
-                Günümüz dünyasında internetin yaygınlaşması, kişisel bilgisayarlarla akıllı cihazların kullanım oranının
-                artması ve kişisel bilgilerin sayısal ortamlarda depolanmasına paralel olarak, bu bilgilere yetkisiz
-                erişmek isteyenlerin sayısı da artmıştır. Yetkisiz erişim ve internet korsanlığı (hacker) siber suç
-                kavramını ortaya çıkarmıştır. Devletleri dahi etkileyen bu tehditlerle mücadele edebilmek için Adli
-                Bilişim Mühendisliği (Digital Forensics Engineering) disiplini ortaya çıkmıştır.
+                Adli Bilişim Mühendisliği 2. Sınıf Öğrencisi
             </p>
 
         </div>
@@ -111,34 +107,47 @@ if (isset($_POST["adsoyad"])) {
             <div class="hakkimizda-ust-grup">
                 <div id="sol">
                     <h5 id="h5sol">
-                        Adli Bilişim Mühendisliği Temel Mühendislik Eğitimiyle Beraber Alana Yönelik Derslerle Kişilerin
-                        Bu Alanda Uzmanlaşmasını Amaçlamaktadır.
+                        Adli Bilişim Mühendisliği 2. sınıf öğrencisi olarak
+web güvenliği, siber güvenlik ve adli bilişim
+alanlarında kendimi geliştirmeye odaklanıyorum.
                     </h5>
                 </div>
 
                 <div id="sag">
                     <span>A</span>
                     <p id="psag">
-                        dli Bilişim Mühendisliği bölümünün Amacı; Değerli Bilgisayar Mühendisliği ile ortak derslerle,
-                        Mühendislik Yaklaşımıyla, araştırma, geliştirme, bilgi güvenliği, siber güvenlik ve bilişim
-                        hukuku ile ilgili tüm süreçlerdeki Adli Vakaları Çözebilecek ve yönetebilecek Yetkinlikte
-                        Mühendisler Yetiştirmektir.
+                        Adli Bilişim Mühendisliği 2. sınıf öğrencisiyim.
+Siber güvenlik alanında hem savunma hem de saldırı
+perspektiflerini anlayarak kendimi geliştirmeye
+odaklanıyorum.
                     </p>
                 </div>
             </div>
 
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200" alt="Adli Bilişim"
-                class="img-fluid">
+            <img src="ben.jpg" alt="Adar Aydınoğlu" class="profil-foto">
 
             <p id="pson">
-                Adli Bilişim Mühendisliği, Suçlarla İlgili Dijital Kanıtların Toplanması, Analizi Ve Yorumlanması Gibi
-                Konuları Ele Alan Bir Bölümdür. Adli Bilişim Mühendisliği; Bilgisayar Korsanlığı, Veri Kurtarma, Dijital
-                Delillerin Toplanması Ve Analizi, Siber Suçlar, Veri Güvenliği, Ağ Güvenliği Gibi Konulara Odaklanır.
-                Adli Bilişim Mühendisliği Bölümünde Öğrenciler; Dijital Delillerin Toplanması Ve Analizi, Veri Kurtarma,
-                Siber Saldırıların Önlenmesi Ve Tespiti, Bilgisayar Korsanlığı İle Mücadele, Ağ Güvenliği, Veri
-                Şifreleme Ve Diğer Teknik Becerileri Öğrenirler. Bu Bilgi Ve Beceriler, Mahkemelerde Ve Savcılıklarda
-                Kullanılan Dijital Kanıtların Doğrulanması Ve Suçlu Kişilerin Tespit Edilmesi İçin Önemlidir.
-            </p>
+
+SIEM sistemleri üzerinden log analizi,
+tehdit avcılığı ve güvenlik olaylarının
+tespit süreçleri üzerine çalışırken;
+aynı zamanda saldırı tekniklerinin çalışma mantığını,
+saldırı simülasyonlarını ve web güvenliği
+zafiyetlerini araştırıyorum.
+
+OWASP Top 10 kapsamındaki açıklıkları,
+XSS ve SQL Injection gibi zafiyetlerin
+çalışma mantığını uygulamalı laboratuvar
+ortamlarında analiz ediyorum.
+
+Teorik bilgimi laboratuvar çalışmaları,
+CTF etkinlikleri ve çeşitli projelerle
+destekleyerek güncel tehditleri takip ediyor,
+hem savunma hem de saldırı teknikleri
+konusunda yetkinliklerimi geliştirmeye
+odaklanıyorum.
+
+</p>
 
         </div>
 
@@ -242,7 +251,7 @@ if (isset($_POST["adsoyad"])) {
 
         <footer>
 
-            <p>2024 tüm hakları gizlidir</p>
+            <p>2026 Adar AYDINOĞLU</p>
 
             <div class="sosyal">
                 <span class="parantez-ikon">[ <i class="fa-brands fa-linkedin-in"></i> ]</span>
@@ -259,5 +268,6 @@ if (isset($_POST["adsoyad"])) {
     </section>
 
 </body>
+
 
 </html>

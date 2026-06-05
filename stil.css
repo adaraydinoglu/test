@@ -417,4 +417,14 @@ footer p {
 
 #up:hover {
     background: #1c355e;
+
+}
+.profil-foto{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    margin:30px auto;
+    border:5px solid white;
 }
